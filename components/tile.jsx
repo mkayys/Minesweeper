@@ -7,9 +7,19 @@ class Tile extends React.Component{
     }
 
     render() {
+        const { tile } = this.props;
+        let text;
+        if (tile.bombed) {
+            text = "💣";
+        } else if (tile.explored) {
+            text = "";
+        } else if (tile.flagged) {
+            text = "🏁";
+        };
+
         return(
             <div className='tile-container'>
-                <span>T</span>
+                <span>{text}</span>
             </div>
         )
     }
