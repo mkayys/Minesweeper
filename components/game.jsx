@@ -1,5 +1,6 @@
 import React from 'react';
 import * as Minesweeper from '../minesweeper';
+import Board from './board';
 
 class Game extends React.Component{
 
@@ -7,7 +8,7 @@ class Game extends React.Component{
         super(props);
 
         this.state = {
-            board: new Minesweeper.Board()
+            board: new Minesweeper.Board(5, 5)
         }
 
         this.updateGame = this.updateGame.bind(this);
