@@ -25,7 +25,7 @@ class Tile extends React.Component{
 
         return(
             <div className='tile-container'>
-                <span>{text}</span>
+                <div className={klass}>{text}</div>
             </div>
         )
     }
